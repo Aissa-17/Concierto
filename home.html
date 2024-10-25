@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aichacerts</title>
+    <link rel="stylesheet" href="Conciertos.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="home.html"><img src="img/logo.jpg" alt="logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/buscar">Buscar Conciertos</a></li>
+                <li><a href="/perfil">Mi Perfil</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <img src="img/user.jpg" alt="Icono de menú" class="dropdown-toggle" onclick="toggleDropdown()">
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="/login" class="btn">Iniciar Sesión</a>
+                    <a href="/register" class="btn btn-secondary">Registrarse</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Descubre los mejores conciertos cerca de ti</h1>
+            <p>Busca por ciudad, género musical o artista</p>
+            <form class="search-form">
+                <input type="text" placeholder="Busca conciertos por ciudad o artista">
+                <select>
+                    <option value="">Género musical</option>
+                    <option value="rock">Rock</option>
+                    <option value="pop">Pop</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="electronica">Electrónica</option>
+                    <option value="reggaeton">Reggaeton</option>
+                    <option value="rap">Rap</option>
+                    <option value="trap">Trap</option>
+                </select>
+                <button type="submit" class="btn">Buscar</button>
+            </form>
+        </div>
+    </section>
+    <section class="featured-concerts">
+        <h2>Próximos Conciertos</h2>
+        <div class="concert-grid">
+            <div class="concert-card">
+                <img src="img/rocjk.jpg" alt="Concierto Rock">
+                <div class="concert-info">
+                    <h3>Concierto de Rock</h3>
+                    <p>Fecha: 20 Noviembre 2024</p>
+                    <p>Lugar: Madrid</p>
+                    <p>Precio: 25€</p>
+                    <a href="/concierto/1" class="btn btn-small">Ver Detalles</a>
+                </div>
+            </div>
+            <div class="concert-card">
+                <img src="img/jazz.jpg" alt="Concierto Jazz">
+                <div class="concert-info">
+                    <h3>Festival de Jazz</h3>
+                    <p>Fecha: 15 Diciembre 2024</p>
+                    <p>Lugar: Barcelona</p>
+                    <p>Precio: 30€</p>
+                    <a href="/concierto/2" class="btn btn-small">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="benefits">
+        <h2>¿Por qué Aichacerts?</h2>
+        <div class="benefit-grid">
+            <div class="benefit-item">
+                <i class="fas fa-search"></i>
+                <h3>Fácil búsqueda</h3>
+                <p>Encuentra los mejores conciertos por ubicación y género musical.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-ticket-alt"></i>
+                <h3>Compra sencilla</h3>
+                <p>Compra entradas rápidamente y asegura tu lugar en los mejores eventos.</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-heart"></i>
+                <h3>Recomendaciones personalizadas</h3>
+                <p>Recibe sugerencias basadas en tus gustos musicales.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Aichacerts. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                <li><a href="/terminos">Términos de Servicio</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer> 
+    
+    <script>
+    function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownContent");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Cerrar el desplegable si se hace clic fuera
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            var dropdown = document.getElementById("dropdownContent");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>

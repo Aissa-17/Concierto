@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin-right: 10px;
+    margin-left: 10px;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img{
+    height: 5em;
+    width: 5em;
+    border-radius: 10px;
+}
+
+nav{
+    background-color: #1f1f1f;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    font-size: var(--font-size-pequeno);
+    justify-content: space-between; 
+    align-items: center;
+    height: auto;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 11em;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.search-form {
+    display: flex;
+    gap: 1rem;
+}
+
+.featured-concerts {
+    padding: 4rem 0;
+    
+}
+
+.concert-card {
+    padding: 20px;
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+}
+.concert-card img{
+    height: 20em;
+    width: 20em;
+    border-radius: 10px;
+}
+
+
+.benefits h2{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.benefit-grid {
+    display: flex;
+    justify-content: space-around;
+}
+.benefit-item{
+    margin-bottom: 5em;
+}
+
+.footer-content {
+    background-color: #1f1f1f;
+    text-align: center;
+    padding: 2rem 0;
+}
+.footer-content ul {
+    list-style: none;
+}
+.footer-content a {
+    text-decoration: none;
+    color: red;
+}
+
+.dropdown-toggle{
+    height: 3em;
+    width: 3em;
+    border-radius: 100%;
+}
+#dropdownContent a{
+    display: flex;
+}
