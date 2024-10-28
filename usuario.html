@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aichacerts</title>
+    <link rel="icon" type="image/png" href="img/logo.jpg">
+    <link rel="stylesheet" href="Conciertos.css">
+    <!-- Metadatos para los motores de búsqueda -->
+    <meta name="description"
+    content="Encuentra los mejores eventos/conciertos mas cercanos a tu ubicación y no te los pierdas."/>
+    <meta
+    name="keywords"
+    content="conciertos, concert, concerts, fiesta, pueblo, discoteca"/>
+    <meta name="author" content="Aissa Allay" />
+    <meta name="robots" content="index, follow" />
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="home.html"><img src="img/logo.jpg" alt="logo"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="home.html">Inicio</a></li>
+                <li><a href="ExplorarConciertos.html">Buscar Conciertos</a></li>
+                <li><a href="usuario.html">Mi Perfil</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <img src="img/user.jpg" alt="Icono de menú" class="dropdown-toggle" onclick="toggleDropdown()">
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="login.html" class="btn">Iniciar Sesión</a>
+                    <a href="register.html" class="btn btn-secondary">Registrarse</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="user-profile">
+        <section class="profile-info">
+            <img src="img/user.jpg" alt="Foto de perfil" class="profile-avatar">
+            <h2>Nombre del Usuario</h2>
+            <p>Correo: usuario@correo.com</p>
+            <button class="edit-button">Editar Perfil</button>
+        </section>
+
+        <!-- Configuraciones de Cuenta -->
+        <section class="account-settings">
+            <h3>Configuraciones de la Cuenta</h3>
+            <button>Cambiar Contraseña</button>
+            <button>Eliminar Cuenta</button>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Aichacerts. Todos los derechos reservados.</p>
+            <ul class="footer-links">
+                <li><a href="/politica-privacidad">Política de Privacidad</a></li>
+                <li><a href="/terminos">Términos de Servicio</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"><img src="img/Logo_de_Facebook.png" alt="fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"><img src="img/icono-x-twitter_878233-1623.avif" alt="x"></i></a>
+                <a href="#"><i class="fab fa-instagram"><img src="img/insta.jpg" alt="insta"></i></a>
+            </div>
+        </div>
+    </footer> 
+    
+    <script>
+    function toggleDropdown() {
+    var dropdown = document.getElementById("dropdownContent");
+    dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+    }
+
+    // Cerrar el desplegable si se hace clic fuera
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown-toggle')) {
+            var dropdown = document.getElementById("dropdownContent");
+            if (dropdown.style.display === "block") {
+                dropdown.style.display = "none";
+            }
+        }
+    }
+    </script>
+</body>
+</html>
